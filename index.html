@@ -47,6 +47,7 @@
         if (xhr.status != 200) {
           alert("Произошла внутренняя ошибка. Возвращайтесь позднее и всё получится!")
         } else {
+          alert(xhr.responseText);
           window.location.replace("https://new.mygreenway.com/invite/partner/" + xhr.responseText);
         }
       }
