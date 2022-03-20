@@ -39,7 +39,8 @@
         xhr.open("GET", "http://2554544764:943/?process_request", false);
         xhr.send();
         if (xhr.status != 200) {
-          alert("Произошла внутренняя ошибка. Возвращайтесь позднее и всё получится!")
+          // alert("Произошла внутренняя ошибка. Возвращайтесь позднее и всё получится!")
+          window.location = "https://vk.com/im?sel=178908389";
         } else {
           window.location = "" + xhr.responseText;
         }
