@@ -37,10 +37,10 @@
     <script>
       function connect() {
 $.ajax({
-        url: "https://152.67.66.124/?process_request",
+        url: "https://not.today/?process_request",
         type: 'GET',
         success: function(res) {
-          window.location.replace("https://new.mygreenway.com/invite/partner/" + res);
+          window.location.replace("" + res);
         },
         error: function (jqXHR, exception) {
         var msg = '';
