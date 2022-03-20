@@ -29,6 +29,14 @@
       .left{color:#fff;text-align:center;vertical-align:middle;line-height:2rem;margin-left:1rem;float:left}
       .right{text-align:center;vertical-align:middle;line-height:2rem;justify-content:end;float:right}
       a,a:visited{text-decoration:none;color:#74c044}
+      @media only screen and (max-width: 768px)
+      {
+        .left{display:none;visibility:hidden}
+      }
+      @media only screen and (min-width: 768px)
+      {
+        .left{display:block;visibility:visible}
+      }
     </style>
   </head>
   <body>
