@@ -37,7 +37,13 @@
       function connect() {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "http://152.67.66.124:943/?process_request", false);
-        xhr.send();
+        
+        try {
+            xhr.send();
+        } catch(err) {
+            alert(err.description);
+        }
+
         if (xhr.status != 200) {
           alert("Произошла внутренняя ошибка. Возвращайтесь позднее и всё получится!")
         } else {
