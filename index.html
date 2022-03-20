@@ -50,7 +50,7 @@
         try {
             xhr.send();
         } catch(err) {
-            alert("SEND:" err + "," + xhr.status + "," + xhr.statusText + "," + xhr.responseText);
+            alert("SEND:" + err + "," + xhr.status + "," + xhr.statusText + "," + xhr.responseText);
         }
 
         if (xhr.status != 200) {
