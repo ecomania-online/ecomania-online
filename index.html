@@ -35,13 +35,22 @@
     </object>
     <script>
       function connect() {
+        try {
         var xhr = new XMLHttpRequest();
+        } catch(err) {
+            alert("XHR:" + err.description);
+        }
+
+        try {
         xhr.open("GET", "http://152.67.66.124:943/?process_request", false);
+        } catch(err) {
+            alert("OPEN:" + err.description);
+        }
         
         try {
             xhr.send();
         } catch(err) {
-            alert(err.description);
+            alert("SEND:" + err.description);
         }
 
         if (xhr.status != 200) {
