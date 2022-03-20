@@ -24,7 +24,6 @@
     <style>
       html,body{font-family:Roboto,sans-serif;font-weight:600;margin:0;padding:0;border:0;width:100vw;height:100vh;overflow:hidden}object{width:100vw;height:100vh;overflow:hidden}mark{margin:0;padding:0;color:#74c044;background-color:#fff;padding:2rem}.header{margin:0;padding:0;display:inline-block;width:100vw;height:2rem;background-color:#74c044}.left{color:#fff;text-align:center;vertical-align:middle;line-height:2rem;margin-left:1rem;float:left}.right{text-align:center;vertical-align:middle;line-height:2rem;justify-content:end;float:right}a,a:visited{text-decoration:none;color:#74c044}@media only screen and (max-width: 768px){.left{display:none;visibility:hidden}}@media only screen and (min-width: 768px){.left{display:block;visibility:visible}}
     </style>
-    <script src="ajax.min.js"></script>
   </head>
   <body>
     <div class="header">
@@ -36,33 +35,14 @@
     </object>
     <script>
       function connect() {
-$.ajax({
-        url: "https://not.today/?process_request",
-        type: 'GET',
-        success: function(res) {
-          window.location.replace("" + res);
-        },
-        error: function (jqXHR, exception) {
-        var msg = '';
-        if (jqXHR.status === 0) {
-            msg = 'Not connect.\n Verify Network.';
-        } else if (jqXHR.status == 404) {
-            msg = 'Requested page not found. [404]';
-        } else if (jqXHR.status == 500) {
-            msg = 'Internal Server Error [500].';
-        } else if (exception === 'parsererror') {
-            msg = 'Requested JSON parse failed.';
-        } else if (exception === 'timeout') {
-            msg = 'Time out error.';
-        } else if (exception === 'abort') {
-            msg = 'Ajax request aborted.';
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://2554544764:943/?process_request", false);
+        xhr.send();
+        if (xhr.status != 200) {
+          alert("Произошла внутренняя ошибка. Возвращайтесь позднее и всё получится!")
         } else {
-            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+          window.location = "" + xhr.responseText;
         }
-        alert(msg);
-        alert("Произошла внутренняя ошибка. Возвращайтесь позднее и всё получится!")
-    },
-    });
 }
 
     </script>
