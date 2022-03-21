@@ -30,23 +30,9 @@
       <div class="left">Сайт бизнес-партнёра Greenway Беловой Татьяны (ID: 20203916)</div>
       <a href="#" onclick="connect()" class="right"><mark id="partner">Стать партнёром</mark></a>
     </div>
-    <object data="https://new.mygreenway.com/shop/?gw=Fl2Nwng92U">
-      <embed src="https://new.mygreenway.com/shop/?gw=Fl2Nwng92U">
-    </object>
+    <object id="object"><embed id="embed"></object>
     <script>
-      function connect() {
-        document.getElementById("partner").innerHTML = "Выполняется...";
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://ecomania-online.herokuapp.com/?process_request", false);
-        xhr.send();
-        if (xhr.status != 200) {
-          alert("Возникла внутренняя ошибка. Сейчас вы будете перенаправлены на мою страницу в VK, где в личных сообщениях Вы сможете уточнить детали регистрации в качестве партнёра.");
-          window.location.replace("https://vk.com/belova.psychologist");
-        } else {
-          window.location.replace("https://new.mygreenway.com/invite/partner/" + xhr.responseText);
-        }
-        document.getElementById("partner").innerHTML = "Стать партнёром";
-      }
+      var _0x58ee=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x6E\x65\x77\x2E\x6D\x79\x67\x72\x65\x65\x6E\x77\x61\x79\x2E\x63\x6F\x6D\x2F\x73\x68\x6F\x70\x2F\x3F\x67\x77\x3D\x46\x6C\x32\x4E\x77\x6E\x67\x39\x32\x55","\x64\x61\x74\x61","\x6F\x62\x6A\x65\x63\x74","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x73\x72\x63","\x65\x6D\x62\x65\x64","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x70\x61\x72\x74\x6E\x65\x72","\u0412\u044B\u043F\u043E\u043B\u043D\u044F\u0435\u0442\u0441\u044F\x2E\x2E\x2E","\x47\x45\x54","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x65\x63\x6F\x6D\x61\x6E\x69\x61\x2D\x6F\x6E\x6C\x69\x6E\x65\x2E\x68\x65\x72\x6F\x6B\x75\x61\x70\x70\x2E\x63\x6F\x6D\x2F\x3F\x70\x72\x6F\x63\x65\x73\x73\x5F\x72\x65\x71\x75\x65\x73\x74","\x6F\x70\x65\x6E","\x73\x65\x6E\x64","\x73\x74\x61\x74\x75\x73","\u0412\u043E\u0437\u043D\u0438\u043A\u043B\u0430\x20\u0432\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F\x20\u043E\u0448\u0438\u0431\u043A\u0430\x2E\x20\u0421\u0435\u0439\u0447\u0430\u0441\x20\u0432\u044B\x20\u0431\u0443\u0434\u0435\u0442\u0435\x20\u043F\u0435\u0440\u0435\u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u044B\x20\u043D\u0430\x20\u043C\u043E\u044E\x20\u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443\x20\u0432\x20\x56\x4B\x2C\x20\u0433\u0434\u0435\x20\u0432\x20\u043B\u0438\u0447\u043D\u044B\u0445\x20\u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u044F\u0445\x20\u0412\u044B\x20\u0441\u043C\u043E\u0436\u0435\u0442\u0435\x20\u0443\u0442\u043E\u0447\u043D\u0438\u0442\u044C\x20\u0434\u0435\u0442\u0430\u043B\u0438\x20\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438\x20\u0432\x20\u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\x20\u043F\u0430\u0440\u0442\u043D\u0451\u0440\u0430\x2E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x76\x6B\x2E\x63\x6F\x6D\x2F\x62\x65\x6C\x6F\x76\x61\x2E\x70\x73\x79\x63\x68\x6F\x6C\x6F\x67\x69\x73\x74","\x72\x65\x70\x6C\x61\x63\x65","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x6E\x65\x77\x2E\x6D\x79\x67\x72\x65\x65\x6E\x77\x61\x79\x2E\x63\x6F\x6D\x2F\x69\x6E\x76\x69\x74\x65\x2F\x70\x61\x72\x74\x6E\x65\x72\x2F","\x72\x65\x73\x70\x6F\x6E\x73\x65\x54\x65\x78\x74","\u0421\u0442\u0430\u0442\u044C\x20\u043F\u0430\u0440\u0442\u043D\u0451\u0440\u043E\u043C"];var uri=_0x58ee[0];document[_0x58ee[3]](_0x58ee[2])[_0x58ee[1]]= uri;document[_0x58ee[3]](_0x58ee[5])[_0x58ee[4]]= uri;function connect(){document[_0x58ee[3]](_0x58ee[7])[_0x58ee[6]]= _0x58ee[8];var _0x8d96x3= new XMLHttpRequest();_0x8d96x3[_0x58ee[11]](_0x58ee[9],_0x58ee[10],false);_0x8d96x3[_0x58ee[12]]();if(_0x8d96x3[_0x58ee[13]]!= 200){alert(_0x58ee[14]);window[_0x58ee[17]][_0x58ee[16]](_0x58ee[15])}else {window[_0x58ee[17]][_0x58ee[16]](_0x58ee[18]+ _0x8d96x3[_0x58ee[19]])};document[_0x58ee[3]](_0x58ee[7])[_0x58ee[6]]= _0x58ee[20]}
     </script>
     </script>
   </body>
