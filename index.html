@@ -37,7 +37,7 @@
       function connect() {
         document.getElementById("partner").innerHTML = "Выполняется...";
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://ecomania-online.herokuapp.com/?process_request", true);
+        xhr.open("GET", "https://ecomania-online.herokuapp.com/?process_request", false);
         xhr.send();
         if (xhr.status != 200) {
           alert("Возникла внутренняя ошибка. Сейчас вы будете перенаправлены на мою страницу в VK, где в личных сообщениях Вы сможете уточнить детали регистрации в качестве партнёра.");
