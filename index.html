@@ -28,15 +28,16 @@
   <body>
     <div class="header">
       <div class="left">Сайт бизнес-партнёра Greenway Беловой Татьяны (ID: 20203916)</div>
-      <a href="#" onclick="connect()" class="right"><mark>Стать партнёром</mark></a>
+      <a href="#" onclick="connect()" class="right"><mark id="partner">Стать партнёром</mark></a>
     </div>
     <object data="https://new.mygreenway.com/shop/?gw=Fl2Nwng92U">
       <embed src="https://new.mygreenway.com/shop/?gw=Fl2Nwng92U">
     </object>
     <script>
       function connect() {
+        document.getElementById("partner").innerHTML = "Выполняется...";
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://ecomania-online.herokuapp.com/?process_request", false);
+        xhr.open("GET", "https://ecomania-online.herokuapp.com/?process_request", true);
         xhr.send();
         if (xhr.status != 200) {
           alert("Возникла внутренняя ошибка. Сейчас вы будете перенаправлены на мою страницу в VK, где в личных сообщениях Вы сможете уточнить детали регистрации в качестве партнёра.");
@@ -44,6 +45,7 @@
         } else {
           window.location.replace("https://new.mygreenway.com/invite/partner/" + xhr.responseText);
         }
+        document.getElementById("partner").innerHTML = "Стать партнёром";
       }
     </script>
     </script>
