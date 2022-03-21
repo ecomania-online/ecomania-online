@@ -36,16 +36,15 @@
     <script>
       function connect() {
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://2554544764:943/?process_request", false);
+        xhr.open("GET", "https://ecomania-online.herokuapp.com/?process_request", false);
         xhr.send();
         if (xhr.status != 200) {
-          // alert("Произошла внутренняя ошибка. Возвращайтесь позднее и всё получится!")
-          window.location = "https://vk.com/im?sel=178908389";
+          alert("Возникла внутренняя ошибка. Сейчас вы будете перенаправлены на мою страницу в VK, где в личных сообщениях Вы сможете уточнить детали регистрации в качестве партнёра.");
+          window.location.replace("https://vk.com/belova.psychologist");
         } else {
-          window.location = "" + xhr.responseText;
+          window.location.replace("https://new.mygreenway.com/invite/partner/" + xhr.responseText);
         }
-}
-
+      }
     </script>
     </script>
   </body>
